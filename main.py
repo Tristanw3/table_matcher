@@ -1,6 +1,5 @@
 import csv
 
-filepath = './test_data.csv'
 
 def get_csv_data(filepath: str):
     data = []
@@ -10,6 +9,15 @@ def get_csv_data(filepath: str):
             data.append(row)
     return data
 
+def match_tables(table_1: list, table_2: list):
+    if(table_1 == table_2):
+        print("Matched")
+
 if __name__ == '__main__':
-    data = get_csv_data()
-    print(data)
+    filepath_1 = './test_data.csv'
+    table_1 = get_csv_data(filepath_1)
+
+    filepath_2 = './test_data.csv'
+    table_2 = get_csv_data(filepath_2)
+    
+    match_tables(table_1, table_2)
